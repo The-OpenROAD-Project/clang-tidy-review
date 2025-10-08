@@ -1,16 +1,16 @@
-FROM ubuntu:25.10
+FROM openroad/ubuntu24.04-dev:latest
 
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends\
     build-essential cmake git \
     tzdata \
-    clang-tidy-14 \
+    clang-tidy-15 \
+    clang-tidy-16 \
     clang-tidy-17 \
     clang-tidy-18 \
     clang-tidy-19 \
     clang-tidy-20 \
-    clang-tidy-21 \
     python3 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/
